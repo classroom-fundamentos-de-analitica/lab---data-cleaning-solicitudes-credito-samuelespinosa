@@ -16,7 +16,6 @@ def clean_data():
     df['sexo'] = df.sexo.str.lower()
     df['tipo_de_emprendimiento'] = df.tipo_de_emprendimiento.str.lower()
     df['idea_negocio']=df['idea_negocio'].apply(lambda x: x.lower().replace("_", " ").replace("-", " "))
-    df.barrio = [str.lower(barrio).replace("_", " ").replace("-", " ") for barrio in df.barrio]
     df['barrio']=df['barrio'].apply(lambda x: x.lower().replace("_"," ").replace("-"," "))
     df['línea_credito']=df['línea_credito'].apply(lambda x: x.lower().replace("-"," ").replace("_"," "))
     df['comuna_ciudadano'] = df.comuna_ciudadano.astype(int)
